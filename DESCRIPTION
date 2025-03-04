@@ -38,7 +38,6 @@ Suggests:
     pbapply,
     remotes,
     rmarkdown,
-    testthat,
     tmap,
     bookdown
 VignetteBuilder: knitr
