@@ -1,4 +1,7 @@
-# pct 0.10.0
+# pct 0.10.0 (March 2025)
+
+- Remove un-necessary tests
+- Assorted changes for CRAN
 
 # pct 0.9.9 (May 2023)
 
