@@ -6,20 +6,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Estimating distance cycled per zone in England and Wales regions • pct</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Estimating distance cycled per zone in England and Wales regions">
-<meta property="og:description" content="pct">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
-    
+
 
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -48,7 +47,7 @@
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
-     
+
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -74,7 +73,7 @@
 <li>
   <a href="https://github.com/ITSLeeds/pct/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
-     
+
   </a>
 </li>
       </ul>
@@ -85,7 +84,7 @@
 </div>
 <!--/.navbar -->
 
-      
+
 
       </header><div class="row">
   <div class="col-md-9 contents">
@@ -96,7 +95,7 @@ and Wales regions</h1>
 Sheehan</h4>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/ITSLeeds/pct/blob/HEAD/vignettes/km-cycled.Rmd" class="external-link"><code>vignettes/km-cycled.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/ITSLeeds/pct/blob/master/vignettes/km-cycled.Rmd" class="external-link"><code>vignettes/km-cycled.Rmd</code></a></small>
       <div class="hidden name"><code>km-cycled.Rmd</code></div>
 
     </div>
@@ -174,15 +173,15 @@ again, this is achieved using <code>base</code> r functionality.</p>
 <p>With this calculated, we can now answer our question and visualize
 yearly km’s cycled using <code>tmap</code>.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span>  <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tm_shape.html" class="external-link">tm_shape</a></span><span class="op">(</span><span class="va">zones</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tm_polygons.html" class="external-link">tm_fill</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span>  <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_shape.html" class="external-link">tm_shape</a></span><span class="op">(</span><span class="va">zones</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_polygons.html" class="external-link">tm_fill</a></span><span class="op">(</span></span>
 <span>      col <span class="op">=</span> <span class="st">"mkm_cycled_for_commuting_per_year_estimated"</span>,</span>
 <span>      style <span class="op">=</span> <span class="st">"quantile"</span>,</span>
 <span>      palette <span class="op">=</span> <span class="st">"plasma"</span>,</span>
 <span>      title <span class="op">=</span> <span class="st">"Yearly distance cycled by commuters per day\n(2011 Census Data)"</span>,</span>
 <span>      legend.size.is.portrait <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span>    <span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tm_layout.html" class="external-link">tm_layout</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_layout.html" class="external-link">tm_layout</a></span><span class="op">(</span></span>
 <span>      title <span class="op">=</span> <span class="st">"OXFORDSHIRE"</span>,</span>
 <span>      title.position <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"left"</span>, <span class="st">"top"</span><span class="op">)</span>,</span>
 <span>      bg.color <span class="op">=</span> <span class="st">"honeydew3"</span>,</span>
@@ -223,16 +222,16 @@ previous method into a function.</p>
 <span>    <span class="fl">2</span> <span class="op">*</span> <span class="fl">200</span> <span class="op">/</span> <span class="co"># estimate of trips days per year, morning and afternoon</span></span>
 <span>    <span class="fl">1e9</span></span>
 <span>  <span class="co"># Plot results</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tmap_mode.html" class="external-link">tmap_mode</a></span><span class="op">(</span><span class="st">"plot"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tm_shape.html" class="external-link">tm_shape</a></span><span class="op">(</span><span class="va">zones</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tm_polygons.html" class="external-link">tm_fill</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tmap_mode.html" class="external-link">tmap_mode</a></span><span class="op">(</span><span class="st">"plot"</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_shape.html" class="external-link">tm_shape</a></span><span class="op">(</span><span class="va">zones</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_polygons.html" class="external-link">tm_fill</a></span><span class="op">(</span></span>
 <span>      col <span class="op">=</span> <span class="st">"mkm_cycled_for_commuting_per_year_estimated"</span>,</span>
 <span>      style <span class="op">=</span> <span class="st">"quantile"</span>,</span>
 <span>      palette <span class="op">=</span> <span class="st">"plasma"</span>,</span>
 <span>      title <span class="op">=</span> <span class="st">"Million km's cycled by commuters per year\n(2011 Census Data)"</span>,</span>
 <span>      legend.size.is.portrait <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span>    <span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tm_layout.html" class="external-link">tm_layout</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_layout.html" class="external-link">tm_layout</a></span><span class="op">(</span></span>
 <span>      title <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/chartr.html" class="external-link">toupper</a></span><span class="op">(</span><span class="va">region_name</span><span class="op">)</span>,</span>
 <span>      title.position <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"left"</span>, <span class="st">"top"</span><span class="op">)</span>,</span>
 <span>      bg.color <span class="op">=</span> <span class="st">"honeydew3"</span>,</span>
@@ -249,7 +248,7 @@ differences.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">oxfordshire_results</span> <span class="op">=</span> <span class="fu">pct_zones_rnet_current</span><span class="op">(</span>region_name <span class="op">=</span> <span class="st">"oxfordshire"</span><span class="op">)</span></span>
 <span><span class="va">cambrideshire_results</span> <span class="op">=</span> <span class="fu">pct_zones_rnet_current</span><span class="op">(</span>region_name <span class="op">=</span> <span class="st">"cambridgeshire"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tmap_arrange.html" class="external-link">tmap_arrange</a></span><span class="op">(</span><span class="va">oxfordshire_results</span>, <span class="va">cambrideshire_results</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tmap_arrange.html" class="external-link">tmap_arrange</a></span><span class="op">(</span><span class="va">oxfordshire_results</span>, <span class="va">cambrideshire_results</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 <p>In comparison to Oxfordshire, Cambridgeshire spatial distribution of
 km’s cycled exhibit a high number of cycling not only in the centre of
 the region. While Oxfordshire obtains a zone with a higher number of
@@ -261,7 +260,7 @@ Greater Manchester.</p>
 <code class="sourceCode R"><span><span class="va">london_results</span> <span class="op">=</span> <span class="fu">pct_zones_rnet_current</span><span class="op">(</span>region_name <span class="op">=</span> <span class="st">"london"</span><span class="op">)</span></span>
 <span><span class="va">gm_results</span> <span class="op">=</span> <span class="fu">pct_zones_rnet_current</span><span class="op">(</span>region_name <span class="op">=</span> <span class="st">"greater-manchester"</span><span class="op">)</span></span>
 <span><span class="co">#tmap_mode("view")  </span></span>
-<span><span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tmap_arrange.html" class="external-link">tmap_arrange</a></span><span class="op">(</span><span class="va">london_results</span>, <span class="va">gm_results</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tmap_arrange.html" class="external-link">tmap_arrange</a></span><span class="op">(</span><span class="va">london_results</span>, <span class="va">gm_results</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 <p>Jheeze! The maps provides insight at a highly granular level. Both
 Greater Manchester and London have similar quartile ranges and are
 fairly monocentric, however, LSOA’s in London such as
@@ -304,16 +303,16 @@ for the census data, but change the daily miles cycled to use the
 <span>    <span class="fl">2</span> <span class="op">*</span> <span class="fl">200</span> <span class="op">/</span> <span class="co"># estimate of trips days per year, morning and afternoon</span></span>
 <span>    <span class="fl">1e9</span></span>
 <span>  <span class="co">#Plot results</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tmap_mode.html" class="external-link">tmap_mode</a></span><span class="op">(</span><span class="st">"plot"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tm_shape.html" class="external-link">tm_shape</a></span><span class="op">(</span><span class="va">zones</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tm_polygons.html" class="external-link">tm_fill</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tmap_mode.html" class="external-link">tmap_mode</a></span><span class="op">(</span><span class="st">"plot"</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_shape.html" class="external-link">tm_shape</a></span><span class="op">(</span><span class="va">zones</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_polygons.html" class="external-link">tm_fill</a></span><span class="op">(</span></span>
 <span>      col <span class="op">=</span> <span class="st">"mkm_cycled_for_commuting_per_year_estimated"</span>,</span>
 <span>      style <span class="op">=</span> <span class="st">"quantile"</span>,</span>
 <span>      palette <span class="op">=</span> <span class="st">"plasma"</span>,</span>
 <span>      title <span class="op">=</span> <span class="st">"Million km's cycled by commuters per year\n(E-Bike model)"</span>,</span>
 <span>      legend.size.is.portrait <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span>    <span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tm_layout.html" class="external-link">tm_layout</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_layout.html" class="external-link">tm_layout</a></span><span class="op">(</span></span>
 <span>      title <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/chartr.html" class="external-link">toupper</a></span><span class="op">(</span><span class="va">region_name</span><span class="op">)</span>,</span>
 <span>      title.position <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"left"</span>, <span class="st">"top"</span><span class="op">)</span>,</span>
 <span>      bg.color <span class="op">=</span> <span class="st">"honeydew3"</span>,</span>
@@ -330,7 +329,7 @@ the effect an E-bike scenario may have on these two cities.</p>
 <code class="sourceCode R"><span><span class="va">london_results_ebikes</span> <span class="op">=</span> <span class="fu">pct_zones_rnet_ebikes</span><span class="op">(</span>region_name <span class="op">=</span> <span class="st">"london"</span><span class="op">)</span></span>
 <span><span class="va">gm_results_ebikes</span> <span class="op">=</span> <span class="fu">pct_zones_rnet_ebikes</span><span class="op">(</span>region_name <span class="op">=</span> <span class="st">"greater-manchester"</span><span class="op">)</span></span>
 <span><span class="co">#tmap_mode("view")</span></span>
-<span><span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tmap_arrange.html" class="external-link">tmap_arrange</a></span><span class="op">(</span><span class="va">london_results_ebikes</span>, <span class="va">gm_results_ebikes</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tmap_arrange.html" class="external-link">tmap_arrange</a></span><span class="op">(</span><span class="va">london_results_ebikes</span>, <span class="va">gm_results_ebikes</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 <p>Wow! The maps show how an E-Bike scenario could increase cycle uptake
 by ~500%. As this model illustrates, an E-Bike scenario would mean more
 LSOA’s would be in the highest quartile of distance cycled. This would
@@ -362,9 +361,7 @@ how get on. Any comments/contributions to this analysis: welcome.</p>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
+      </div>
 
 </div>
 
@@ -377,16 +374,16 @@ how get on. Any comments/contributions to this analysis: welcome.</p>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
       </footer>
 </div>
 
-  
 
 
-  
+
+
 
   </body>
 </html>
